@@ -8,7 +8,7 @@ export default ({ route, navigation }) => {
     const { name, difficulty } = route.params;
     const { board, filled, solution } = useSelector(state => state.boardReducer);
     const [status, setStatus] = useState('unsolved');
-    const time = 10;
+    const time = settingTime();
     const dispatch = useDispatch();
 
     function settingTime() {
